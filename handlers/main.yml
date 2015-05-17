@@ -1,0 +1,5 @@
+---
+
+- name: Apply rules
+  shell: "IFACE={{ item.interface }} /etc/network/if-{{ item.event }}.d/{{ iptables_script_name }}_{{item.interface}}"
+  with_items: "{{ iptables_rules }}"

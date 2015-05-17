@@ -1,0 +1,8 @@
+---
+
+iptables_rules:
+    - interface: eth0
+      event: up
+      rules:
+            - name: NO RULE DEFINED
+              lines: []

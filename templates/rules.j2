@@ -1,0 +1,13 @@
+#!/bin/sh
+# file created by Ansible, DO NOT EDIT MANUALLY
+# interface: {{ item.interface }}, event: {{ item.event }}
+
+# Exit if the event is not related to "{{ item.interface }}".
+[ "$IFACE" = '{{ item.interface }}' ] || exit 0
+{% for rule in item.rules %}
+
+# {{ rule.name }}
+{% for line in rule.lines %}
+{{ line }}
+{% endfor %}
+{% endfor %}

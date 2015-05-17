@@ -1,0 +1,10 @@
+---
+
+- name: Set rules
+  template: src=rules.j2
+      dest=/etc/network/if-{{ item.event }}.d/{{ iptables_script_name }}_{{item.interface}}
+            owner=root
+            group=root
+            mode=0755
+  with_items: "{{ iptables_rules }}"
+  notify: Apply rules

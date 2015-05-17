@@ -1,0 +1,8 @@
+---
+
+- name: Install iptables
+  apt:  pkg={{ item }}
+        state=installed
+        update_cache=yes
+  with_items:
+      - iptables
