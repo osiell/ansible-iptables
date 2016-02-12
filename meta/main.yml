@@ -1,0 +1,23 @@
+---
+
+galaxy_info:
+  author: Sébastien Alix
+  company: OSIELL
+  description: Ansible role to configure firewall rules with iptables on
+               Debian and Ubuntu platforms.
+  license: GPLv3
+  min_ansible_version: 1.8
+  platforms:
+    - name: Debian
+      versions:
+        - squeeze
+        - wheezy
+        - jessie
+    - name: Ubuntu
+      versions:
+        - precise
+        - trusty
+  categories:
+    - system
+
+dependencies: []
