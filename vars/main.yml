@@ -1,3 +1,5 @@
 ---
 
 iptables_script_name: ansible_iptables
+iptables_apt_update_cache: yes
+iptables_apt_cache_valid_time: 86400
