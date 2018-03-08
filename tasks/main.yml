@@ -1,11 +1,11 @@
 ---
 
-- include: install.yml
+- include_tasks: install.yml
   tags:
     - iptables
     - iptables_install
 
-- include: config.yml
+- include_tasks: config.yml
   tags:
     - iptables
     - iptables_config
