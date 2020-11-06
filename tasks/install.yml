@@ -2,7 +2,7 @@
 
 - name: Install iptables
   apt:  pkg={{ item }}
-        state=installed
+        state=present
         update_cache={{ iptables_apt_update_cache }}
         cache_valid_time={{ iptables_apt_cache_valid_time }}
   with_items:
